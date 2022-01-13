@@ -56,6 +56,10 @@ Recipe.init(
                 model: 'difficulty',
                 key: 'id' 
             }
+        },
+        image: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
         // comment_id: {
         //     type: DataTypes.INTEGER,
