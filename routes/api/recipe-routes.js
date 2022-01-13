@@ -81,10 +81,10 @@ router.post('/', (req, res) => {
         title: req.body.title,
         ingredient: req.body.ingredient,
         instruction: req.body.instruction,
-        Calories: req.body.calories,
-        Category_id: req.body.category_id,
+        calories: req.body.calories,
+        category_id: req.body.category_id,
         user_id: req.body.user_id,
-        Difficulty_id: req.body.Difficulty_id
+        difficulty_id: req.body.difficulty_id
     })
     .then(dbRecipeData => res.json(dbRecipeData))
     .catch(err => {
@@ -100,10 +100,10 @@ router.put('/:id', (req, res) => {
         title: req.body.title,
         ingredient: req.body.ingredient,
         instruction: req.body.instruction,
-        Calories: req.body.calories,
-        Category_id: req.body.category_id,
+        calories: req.body.calories,
+        category_id: req.body.category_id,
         user_id: req.body.user_id,
-        Difficulty_id: req.body.Difficulty_id
+        cifficulty_id: req.body.difficulty_id
     },
     {
         where: {
