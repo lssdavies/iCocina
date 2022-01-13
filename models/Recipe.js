@@ -16,14 +16,14 @@ Recipe.init(
             allowNull: false
         },
         ingredient: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(5000),
             allowNull: false,
             validate: {
             len: [1]
             }
         },
         instruction: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(5000),
             allowNull: false,
             validate: {
             len: [1]
