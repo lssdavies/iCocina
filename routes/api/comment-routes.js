@@ -20,6 +20,33 @@ router.get('/', (req, res) => {
     });
 });
 
+// GET a comment
+// find one category by its `id` value
+router.get('/:id', (req, res) => {
+  Comment.findOne ({
+    where: {
+      id: req.params.id
+    },
+    include: [
+      {
+        model: Recipe,
+        attributes: ['title']
+      }
+    ],
+  })
+  .then ((dbCategoryData) => {
+    if (!dbCategoryData) {
+      res.status(404).json({ message: 'NO comment found with this id!' });
+      return;
+    }
+    res.json(dbCategoryData);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  })
+});
+
 // POST a commnent
 // expects => {comment_text: "This is the comment", user_id: 1, recipe_id: 2}
 router.post('/', (req, res) => {
@@ -32,6 +59,30 @@ router.post('/', (req, res) => {
     .catch(err => {
       console.log(err);
       res.status(400).json(err);
+    });
+});
+
+// update a category by its `id` value
+router.put('/:id', (req, res) => {  
+  Comment.update (
+    {
+      comment_text: req.body.comment_text,
+    },
+    {
+      where: {
+        id: req.params.id
+      }
+    })
+    .then (dbCategoryData => {
+      if (!dbCategoryData) {
+        res.status(404).json({ message: 'NO comment found with this id!' });
+        return;
+      }
+      res.json(dbCategoryData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
     });
 });
 

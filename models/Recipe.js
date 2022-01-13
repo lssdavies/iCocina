@@ -33,7 +33,7 @@ Recipe.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
-            isNumeric: true,
+            isNumeric: true
             }
         },
         category_id: {
