@@ -7,7 +7,7 @@ const User = require('./User');
 
 // RECIPE vs USER
 User.hasMany(Recipe, {
-    foreignKey: 'user-id'
+    foreignKey: 'user_id'
 });
 
 Recipe.belongsTo(User, {
