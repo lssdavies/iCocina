@@ -84,7 +84,8 @@ router.post('/', (req, res) => {
         calories: req.body.calories,
         category_id: req.body.category_id,
         user_id: req.body.user_id,
-        difficulty_id: req.body.difficulty_id
+        difficulty_id: req.body.difficulty_id,
+        image: req.body.image
     })
     .then(dbRecipeData => res.json(dbRecipeData))
     .catch(err => {
