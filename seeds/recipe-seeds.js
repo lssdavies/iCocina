@@ -11,7 +11,7 @@ const dbRecipeData = [
     difficulty_id: 2,
     // does comment_id need to be in this table.
     //comment_id:
-    image: "/images/spaghetti-carbonara.png"
+    image: "https://res.cloudinary.com/dsplaxywu/image/upload/ar_1:1,c_fill,e_art:hokusai,g_auto,h_300,w_300/v1642319955/spaghetti_carbonara_sxmdni.jpg"
   }
 ];
 
