@@ -15,6 +15,11 @@ const dbCommentData = [
     comment_text: 'mmm, this was great! i substituted fresh basil and italian parsley for the thyme and oregano.',
     user_id: 3,
     recipe_id: 3
+  },
+  {
+    comment_text: "I've tried MANY curry recipes and they don't even come close! This one nails the true curry flavors and consistency. My family loves it, I make it all the time.",
+    user_id: 4,
+    recipe_id: 7
   }
 ];
 
