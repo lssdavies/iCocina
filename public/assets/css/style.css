@@ -169,9 +169,42 @@ nav {
     padding: 1rem;
     margin: 0 auto;
 }
+.card   {
+    border: 2px solid var(--additionalColor);
+    border-radius: 1rem;
+    box-shadow: 6px 6px 6px rgba(0,0,0,0.3);
+    margin: 1rem;
+}
+.card-title {
+    text-align: center;
+    color: var(--primaryColor);
+    background-color: var(--secondaryColor);
+    /* padding: .5rem; */
+    border: none;
+    border-radius: 1rem 1rem 0 0;
+}
 
+.card-img img {
+    justify-content: center;
+    height: 10rem;
+    width: 10rem;
+    padding: .5rem;
+    border-radius: 1rem;
+}
 
-
+@media screen and (min-width: 700px)    {
+.cardHolders    {
+    display: flex;
+    /* justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 2px solid var(--accentColor);
+    border-radius: 1rem;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+    padding: 1rem;
+    margin: 0 auto; */
+}
+}
 /* 
 CSs for slideshow
 .slideshowContainer img {
