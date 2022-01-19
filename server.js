@@ -13,6 +13,9 @@ const PORT = process.env.PORT || 3001;
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+// middleware instructing server make all files in public dir readily available
+app.use(express.static('public'));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
