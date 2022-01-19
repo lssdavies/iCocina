@@ -243,6 +243,53 @@ const dbRecipeData = [
     user_id: 4, 
     difficulty_id: 3,
     image: "https://res.cloudinary.com/dsplaxywu/image/upload/c_scale,w_300/v1642442526/samosa_ybkiif.jpg"
+  },
+  {
+    title: "Flan",
+    ingredient: `
+    1 1 3/4 cup heavy cream \n 
+    1 cup whole milk \n
+    1 tsp. pure vanilla extract \n
+    Pinch kosher salt \n
+    1 1/2 cup granulated sugar, divided \n
+    3 large eggs \n
+    3 large eggs yolks`,
+    instruction: `
+    1. Preheat oven to 350 degrees. In a large bowl or measuring cup, whisk to combine cream, milk, vanilla, and salt. \n
+    2. In a medium saucepan over medium-high heat, combine 1 cup sugar with 1/3 cup water. Cook, gently swirling the pot but not stirring, until mixture turns a deep golden color, 10 to 15 minutes. Working quickly, divide caramel into seven 6-ounce ramekins. Gently lift and tilt ramekins to coat the inside with caramel. Place ramekins in a large baking dish. \n
+    3. Whisk eggs, egg yolks, and remaining ½ cup sugar together in a large bowl. Gently mix in cream mixture until just combined. Divide mixture evenly between ramekins, about ½ cup each.  \n
+    4. Pour enough hot water into baking dish to come halfway to top of ramekins. Bake until just set and flan slightly jiggles, 45 to 50 minutes. Transfer ramekins to a cooling rack and let cool completely, about 2 hours. If not serving right away, cover with plastic wrap and chill in the refrigerator until ready to serve. \n
+    5. When ready to serve, use a small knife or offset spatula to carefully loosen the edges of the flan. If refrigerated, warm in microwave in 10 second increments for 30 seconds. Turn flan over onto a plate with a shallow rim, shake gently to release flan, and remove ramekin.`,
+    calories: 223,
+    category_id: 5,
+    user_id: 1, 
+    difficulty_id: 2,
+    image: "https://res.cloudinary.com/dsplaxywu/image/upload/c_scale,w_300/v1642621500/flan_la0il2.jpg"
+  },
+  {
+    title: "Tiramisu",
+    ingredient: `
+    6 egg yolks \n 
+    3/4 cup white sugar \n
+    2/3 cup milk \n
+    1 1/4 cups heavy cream \n
+    1/2 teaspoon vanilla extract \n
+    1 pound mascarpone cheese, at room temperature \n
+    1/4 cup strong brewed coffee, at room temperature \n
+    2 tablespoons rum \n
+    2 (3 ounce) packages ladyfinger cookies \n
+    1 tablespoon unsweetened cocoa powder`,
+    instruction: `
+    1. In a medium saucepan, whisk together egg yolks and sugar until well blended. Whisk in milk and cook over medium heat, stirring constantly, until mixture boils. Boil gently for 1 minute, remove from heat and allow to cool slightly. Cover tightly and chill in refrigerator 1 hour. \n
+    2. In a medium bowl, beat cream with vanilla until stiff peaks form. \n
+    3. Whisk mascarpone into yolk mixture until smooth. \n
+    4. In a small bowl, combine coffee and rum. Split ladyfingers in half lengthwise and drizzle with coffee mixture. \n
+    5. Arrange half of soaked ladyfingers in bottom of a 7x11 inch dish. Spread half of mascarpone mixture over ladyfingers, then half of whipped cream over that. Repeat layers and sprinkle with cocoa. Cover and refrigerate 4 to 6 hours, until set.`,
+    calories: 387,
+    category_id: 5,
+    user_id: 2, 
+    difficulty_id: 2,
+    image: "https://res.cloudinary.com/dsplaxywu/image/upload/c_scale,w_300/v1642622605/tiramisu_am8w57.jpg"
   }
 ];
 
