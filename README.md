@@ -43,7 +43,7 @@ To use this application, please follow the following steps:
 - Create your database using MySQl Shell Command 'mysql -u username -p, enter your password'. Then run 'source db/schema.sql' to create the local database.
 - Check if the database has been created successfully by entering the following in the command line - 'SHOW DATABASES;'
 - Quit MySQl Shell Command - quit;
-- Seed the tables data to your database so you can test your Routes using Insomnua - 'npm run seed'
+- Seed the tables data to your database so you can test your Routes using Insomnia - 'npm run seed'
 - Start the server - 'npm start'
 - Use of local host or Heroku to host the application
 
@@ -78,5 +78,6 @@ Please reach us using:
 - [Mohammad's Github Account](https://github.com/mjwair)
 
 ## Project Links:
+
 * [Deployed Application](https://icocina.herokuapp.com/)
 * [Github Repository](https://github.com/kimberlyamaya/iCocina.git)
