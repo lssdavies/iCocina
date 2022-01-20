@@ -1,7 +1,7 @@
 async function logout() {
     const response = await fetch('/api/users/logout', {
         method: 'post',
-        header: { 'Content-Type': 'aplication/json' }
+        headers: { 'Content-Type': 'aplication/json' }
     });
     if (response.ok) {
         document.location.replace('/');
