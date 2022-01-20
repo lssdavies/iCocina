@@ -53,3 +53,30 @@ After the installation, please test scenarios in Insomnia, local host browser or
 ## License
 
 This project is using the MIT License.
+
+## Contributing
+
+This application was together built by:
+- Kimberly Amaya (github at kimberlyamaya)
+- Khanh Lam (github at khanhlam90)
+- Larry Davies (github at lssdavies)
+- Mohammad Jwair (github at mjwair)
+
+Please feel free to contribute to this project - please find our info at the [Questions](#questions) section and contact us for more infomation.
+
+## Tests
+
+Please refer to [Usage](#usage) section.
+
+## Questions
+
+Please reach us using:
+
+- [Kimberly's Github Account](https://github.com/kimberlyamaya)
+- [Khanh's Github Account](https://github.com/khanhlam90)
+- [Larry's Github Account](https://github.com/lssdavies)
+- [Mohammad's Github Account](https://github.com/mjwair)
+
+## Project Links:
+* [Deployed Application](https://icocina.herokuapp.com/)
+* [Github Repository](https://github.com/kimberlyamaya/iCocina.git)
