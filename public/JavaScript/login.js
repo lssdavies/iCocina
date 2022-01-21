@@ -22,7 +22,6 @@ async function loginFormHandler(event) {
 }
 async function signupFormHandler(event) {
     event.preventDefault();
-    const id = window.location.toSting().split('/')[window.location.toString().split('/').length - 1];
     const username = document.querySelector('#username-signup').value.trim();
     const first_name = document.querySelector('#first_name').value.trim();
     const last_name = document.querySelector('#last_name').value.trim();
@@ -32,7 +31,6 @@ async function signupFormHandler(event) {
         const response = await fetch('/api/users', {
             method: 'post',
             body: JSON.stringify({
-                id,
                 username,
                 first_name,
                 last_name,
