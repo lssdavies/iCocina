@@ -14,9 +14,39 @@
         </div>
         <div class="logIn">
             <nav>
+                {{!-- Hidden Sign In --}}
                 <button id="signIn" class="buttons">Login</button>
+                <div class="hiddenSignIn" id="hiddenSignIn">
+                    <form class="signInForm" id="signInForm">
+                        <label for="email" ></label>
+                        <input type="text" id="email-login" class = "formInput" placeholder="Email" size=10>
+                        <label for="Password" ></label>
+                        <input type="password" id="passsword-login"  class = "formInput"placeholder="Password" size=10>
+                        <div>
+                        <button id="submitSignIn" class="altButtons">Login</button>
+                        <button id="backBtn" class="altButtons">Back</button>
+                        </div>
+                    </form>
+                </div>
                 <button id="signUp" class="buttons">Sign Up</button>
-              
+                <div class="hiddenSignUp" id="hiddenSignUp">
+                    <form class="signInForm" id="signInForm">
+                        <label for="username-signup" ></label>
+                        <input type="text" id="username-signup" class = "formInput" placeholder="User Name" size=10>
+                        <label for="first_name" ></label>
+                        <input type="text" id="first_name" class = "formInput" placeholder="First Name" size=10>
+                        <label for="last_name" ></label>
+                        <input type="text" id="last_name" class = "formInput" placeholder="Last Name" size=10>
+                        <label for="email_signup" ></label>
+                        <input type="text" id="email_signup" class = "formInput" placeholder="Email" size=10>
+                        <label for="password-signup" ></label>
+                        <input type="password" id="password-signup"  class = "formInput"placeholder="Password" size=10>
+                        <div>
+                        <button id="submitSignUp" class="altButtons">Sign Up</button>
+                        <button id="backBtn" class="altButtons">Back</button>
+                        </div>
+                    </form>
+                </div>
             </nav>
         </div>
     </header>
@@ -24,8 +54,8 @@
         <div class= "searchContainer">
             <form class="searchField">
             <div>
-            <label for="categories"> Cuisine Type: </label>
-                <select name="cuisine" id="cuisine">
+            <label for="categories" class="formLabel"> Cuisine Type: </label>
+                <select name="cuisine" id="cuisine" class="formInput">
                     <option disabled selected value> Choose </option>
                     <option value="Mexican Cuisine">Mexican</option>
                     <option value="Chinese Cuisine">Chinese</option>
@@ -35,8 +65,8 @@
                 </select>
                 </div>
                 <div>
-                <label for="difficulty"> Difficulty Level: </label>
-                <select name="difficulty" id="difficulty">
+                <label for="difficulty" class="formLabel"> Difficulty Level: </label>
+                <select name="difficulty" id="difficulty" class="formInput">
                     <option value="Basic">Basic</option>
                     <option value="Moderate">Moderate</option>
                     <option value="Advanced">Advanced</option>
@@ -73,6 +103,7 @@
     <article>
         <div class="cardSection">
             <div class="cardHolders">
+                <h2>Popular Recipes</h2>
                 {{{body}}}
             </div>
         </div>
@@ -81,5 +112,6 @@
     <footer>
 
     </footer>
+    <script src="./assets/javascript/script.js"></script>    
 </body>
 </html>
