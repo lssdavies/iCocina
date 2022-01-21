@@ -19,30 +19,30 @@
                 <div class="hiddenSignIn" id="hiddenSignIn">
                     <form class="signInForm" id="signInForm">
                         <label for="email" ></label>
-                        <input type="text" id="email-login" class = "formInput" placeholder="Email" size=10>
+                        <input type="text" id="email_login" class = "formInput" placeholder="Email" size=10>
                         <label for="Password" ></label>
-                        <input type="password" id="passsword-login"  class = "formInput"placeholder="Password" size=10>
+                        <input type="password" id="password_login"  class = "formInput"placeholder="Password" size=10>
                         <div>
-                        <button id="submitSignIn" class="altButtons">Login</button>
+                        <input type="submit" value="Login" id="submitSignIn" class="altButtons">
                         <button id="backBtn" class="altButtons">Back</button>
                         </div>
                     </form>
                 </div>
                 <button id="signUp" class="buttons">Sign Up</button>
                 <div class="hiddenSignUp" id="hiddenSignUp">
-                    <form class="signInForm" id="signInForm">
+                    <form class="signInForm" id="signUpForm">
                         <label for="username-signup" ></label>
-                        <input type="text" id="username-signup" class = "formInput" placeholder="User Name" size=10>
+                        <input type="text" id="username_signup" class = "formInput" placeholder="User Name" size=10>
                         <label for="first_name" ></label>
                         <input type="text" id="first_name" class = "formInput" placeholder="First Name" size=10>
                         <label for="last_name" ></label>
                         <input type="text" id="last_name" class = "formInput" placeholder="Last Name" size=10>
                         <label for="email_signup" ></label>
                         <input type="text" id="email_signup" class = "formInput" placeholder="Email" size=10>
-                        <label for="password-signup" ></label>
+                        <label for="password_signup" ></label>
                         <input type="password" id="password-signup"  class = "formInput"placeholder="Password" size=10>
                         <div>
-                        <button id="submitSignUp" class="altButtons">Sign Up</button>
+                        <input type="submit" value="Sign Up" id="submitSignIn" class="altButtons">
                         <button id="backBtn" class="altButtons">Back</button>
                         </div>
                     </form>
@@ -112,6 +112,9 @@
     <footer>
 
     </footer>
-    <script src="./assets/javascript/script.js"></script>    
+    <script src="./assets/javascript/script.js"></script>
+    <script src="./assets/javascript/login.js"></script>
+    {{!-- <script src="./assets/javascript/logout.js"></script> 
+    <script src="./assets/javascript/comment.js"></script>       --}}
 </body>
 </html>
