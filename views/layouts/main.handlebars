@@ -14,19 +14,37 @@
         </div>
         <div class="logIn">
             <nav>
+                {{!-- Hidden Sign In --}}
                 <button id="signIn" class="buttons">Login</button>
-                <div class="hiddenSignIn">
+                <div class="hiddenSignIn" id="hiddenSignIn">
                     <form class="signInForm" id="signInForm">
                         <label for="email" ></label>
                         <input type="text" id="email" class = "formInput" placeholder="Email" size=10>
                         <label for="Password" ></label>
                         <input type="password" id="passsword"  class = "formInput"placeholder="Password" size=10>
-                        <button id="submitSignIn" class="buttons">LogIn</button>
-
+                        <div>
+                        <button id="submitSignIn" class="altButtons">Login</button>
+                        <button id="backBtn" class="altButtons">Back</button>
+                        </div>
                     </form>
                 </div>
                 <button id="signUp" class="buttons">Sign Up</button>
-              
+                <div class="hiddenSignUp" id="hiddenSignUp">
+                    <form class="signInForm" id="signInForm">
+                        <label for="firstName" ></label>
+                        <input type="text" id="firstName" class = "formInput" placeholder="First Name" size=10>
+                        <label for="lastName" ></label>
+                        <input type="text" id="lastName" class = "formInput" placeholder="Last Name" size=10>
+                        <label for="email" ></label>
+                        <input type="text" id="email" class = "formInput" placeholder="Email" size=10>
+                        <label for="Password" ></label>
+                        <input type="password" id="passsword"  class = "formInput"placeholder="Password" size=10>
+                        <div>
+                        <button id="submitSignUp" class="altButtons">Sign Up</button>
+                        <button id="backBtn" class="altButtons">Back</button>
+                        </div>
+                    </form>
+                </div>
             </nav>
         </div>
     </header>

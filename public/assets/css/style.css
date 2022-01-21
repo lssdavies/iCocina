@@ -30,29 +30,17 @@ header {
     
 }
 
-/*logo styling*/
-.logo img  {
-   /* width: 100px;
-   height:100px; */
-   margin-left: 1rem;
-}
-
-/* 
-#profile    {
-   width: 50px;
-   height:50px;
-} */
-
 .logIn  {
-    width: 40%;
+    width: 50%;
 }
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 1rem;
-    margin: 1rem 0;
+    position: relative;
+    top: 25px;
+   
 }
 .buttons    {
     padding: 0.25rem .5rem;
@@ -62,27 +50,43 @@ nav {
     border: 1px solid var(--primaryColor);
     border-radius: .5rem;
     background-color: var(--secondaryColor);
-    /* box-shadow: 6px 6px 6px var(--accentColorOpague); */
     box-shadow: 6px 6px 6px rgba(0,0,0,0.8);
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     transition: 0.4s ease-in-out;
 }
-.buttons:hover{
+.altButtons {
+    padding: 0.25rem .25rem;
+    margin-top: .5rem;
+    min-width: 3rem;
+    color: var(--tertiaryColor);
+    border: 1px solid var(--primaryColor);
+    border-radius: .5rem;
+    background-color: var(--secondaryColor);
+    box-shadow: 6px 6px 6px rgba(0,0,0,0.8);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;    
+}
+
+.buttons:hover, .altButtons:hover   {
     color: white;
     text-decoration-color: var(--fifthColor);
     text-decoration: underline;
     background-color: var(--tertiaryColor);
     box-shadow: 4px 4px 5px var(--accentColorOpague);
 }
-.hide   {
-    display: none;
-}
 
-.hiddenSignIn   {
+
+.hiddenSignIn, .hiddenSignUp, .hideButtons   {
     display: none;
 }
+.showSignIn {
+    display: visible;
+}
+   
 .signInForm {
     display: flex;
     justify-content: center;
@@ -90,6 +94,8 @@ nav {
     flex-direction: column;
     
 }
+
+/* Hero Styling*/
 .hero   {
     display: flex;
     align-items: center;
