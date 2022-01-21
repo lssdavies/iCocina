@@ -15,6 +15,16 @@
         <div class="logIn">
             <nav>
                 <button id="signIn" class="buttons">Login</button>
+                <div class="hiddenSignIn">
+                    <form class="signInForm" id="signInForm">
+                        <label for="email" ></label>
+                        <input type="text" id="email" class = "formInput" placeholder="Email" size=10>
+                        <label for="Password" ></label>
+                        <input type="password" id="passsword"  class = "formInput"placeholder="Password" size=10>
+                        <button id="submitSignIn" class="buttons">LogIn</button>
+
+                    </form>
+                </div>
                 <button id="signUp" class="buttons">Sign Up</button>
               
             </nav>
@@ -24,8 +34,8 @@
         <div class= "searchContainer">
             <form class="searchField">
             <div>
-            <label for="categories"> Cuisine Type: </label>
-                <select name="cuisine" id="cuisine">
+            <label for="categories" class="formLabel"> Cuisine Type: </label>
+                <select name="cuisine" id="cuisine" class="formInput">
                     <option disabled selected value> Choose </option>
                     <option value="Mexican Cuisine">Mexican</option>
                     <option value="Chinese Cuisine">Chinese</option>
@@ -35,8 +45,8 @@
                 </select>
                 </div>
                 <div>
-                <label for="difficulty"> Difficulty Level: </label>
-                <select name="difficulty" id="difficulty">
+                <label for="difficulty" class="formLabel"> Difficulty Level: </label>
+                <select name="difficulty" id="difficulty" class="formInput">
                     <option value="Basic">Basic</option>
                     <option value="Moderate">Moderate</option>
                     <option value="Advanced">Advanced</option>
@@ -73,6 +83,7 @@
     <article>
         <div class="cardSection">
             <div class="cardHolders">
+                <h2>Popular Recipes</h2>
                 {{{body}}}
             </div>
         </div>
@@ -81,5 +92,6 @@
     <footer>
 
     </footer>
+    <script src="./assets/javascript/script.js"></script>    
 </body>
 </html>
