@@ -8,10 +8,9 @@ function recipeLookup(event) {
 
     //console.log(category)
     fetch("/api/recipes/"+selectCategory+"/"+selectDifficulty)
-    .then(response => {
-        document.location.replace("/api/recipes/"+selectCategory+"/"+selectDifficulty);
-        //document.location.replace("/recipe")
-    })
+    .then(response => response.json()).then(data => {
+         // populate view with data
+    });
         //return response.json()
     /*}).then (data => {
         //document.location.replace("/api/recipes/"+selectCategory+"/"+selectDifficulty);

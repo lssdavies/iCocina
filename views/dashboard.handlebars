@@ -1,0 +1,19 @@
+{{#if recipe.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each recipes as |recipe|}}
+        <div class="card">
+            <div class="card-img">
+                <img src={{recipe.image}} alt="receipe-image" />
+                <div class="card-body">
+                    <h3>{{recipe.title}}</h3>
+                    <p>{{recipe.ingredient}}</p>
+                    <p>{{recipe.instruction}}</p>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+  </ol>
+</section>  
+{{/if}}
