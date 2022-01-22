@@ -9,10 +9,15 @@ function recipeLookup(event) {
     //console.log(category)
     fetch("/api/recipes/"+selectCategory+"/"+selectDifficulty)
     .then(response => {
-        return response.json()
-    }).then (data => {
-        console.log(data)
+        document.location.replace("/api/recipes/"+selectCategory+"/"+selectDifficulty);
     })
+        //return response.json()
+    /*}).then (data => {
+        //document.location.replace("/api/recipes/"+selectCategory+"/"+selectDifficulty);
+        console.log(data)
+    })*/
+
+
 
 
 }
