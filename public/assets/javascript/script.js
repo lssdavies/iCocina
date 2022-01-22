@@ -2,7 +2,7 @@ const loginBtn = document.getElementById("signIn");
 const signUpBtn = document.getElementById("signUp");
 const signInArea = document.getElementById("hiddenSignIn");
 const signUpArea = document.getElementById("hiddenSignUp");
-const backBtn = document.getElementById("backBtn");
+const backBtn = document.getElementById("backBtn1");
 
 function showLogin() {
   //hide login and sign up buttons on page by adding class to hide element.

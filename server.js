@@ -19,19 +19,8 @@ const sess = {
   }),
 };
 
-// import sequelize connection
-const sequelize = require("./config/connection");
-
 // this is where you put helpers
 const hbs = expressHbs.create({ helpers });
-// const hbs = expressHbs.create({
-//   helpers: {
-//     breaklines(text) {
-//       const newText = text.replace(/(\r\n|\n|\r)/gm, "<br>");
-//       return newText;
-//     },
-//   },
-// });
 
 const app = express();
 const PORT = process.env.PORT || 3001;
