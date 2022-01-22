@@ -98,7 +98,7 @@ const dbRecipeData = [
     1. Season pork with 2 tablespoons salt and 1/2 teaspoon pepper. Place in a pot with broth, half the onion, garlic, and 10 cups water. Bring to a boil, skimming impurities from surface. Reduce heat to low; stir in bay leaves, cloves, and oregano. Simmer, partially covered, until pork is fork-tender, 1 1/2 to 2 hours. Remove onion, garlic, bay leaves, and cloves. \n 
     2. Meanwhile, combine remaining onion, tomatillos, poblanos, jalapenos, cilantro, and oil in a blender; puree until smooth. Transfer to a saucepan and simmer over medium heat, stirring occasionally, until thickened slightly and deep green, 12 to 15 minutes. Stir into soup with hominy and simmer for 10 minutes. Serve with jalapeno, cilantro, avocado, radishes, cabbage, lime wedges, and tortillas.`,
     calories: 385,
-    category_id: 3,
+    category_id: 1,
     user_id: 4, 
     difficulty_id: 3,
     image: "https://res.cloudinary.com/dsplaxywu/image/upload/c_scale,w_300/v1642379715/pozole_verde_bfmfms.jpg"

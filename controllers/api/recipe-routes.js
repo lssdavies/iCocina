@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Recipe, Category, Difficulty, User, Comment } = require('../../models');
+const { Op } = require("sequelize");
 
 // FIND all recipes
 router.get('/', (req, res) => {
@@ -64,6 +65,26 @@ router.get('/:id', (req, res) => {
   });
 });
 
+// getting recipe by params
+router.get('/:cuisine/:difficulty', (req, res) => {
+  Recipe.findAll ({
+    include: {
+      model: Category,
+      where: {
+        category_type: {
+          [Op.eq]: req.params.cuisine
+        }
+      }
+    },
+    raw:true
+//}).then (dbRecipeData => res.render('recipe', {recipes: dbRecipeData}))
+}).then (dbRecipeData => res.json(dbRecipeData))
+.catch(err => {
+  console.log(err);
+  res.status(500).json(err);
+});
+});
+
 // create new recipe
 router.post('/', (req, res) => {
     /* req.body should look like this...
@@ -104,7 +125,8 @@ router.put('/:id', (req, res) => {
         calories: req.body.calories,
         category_id: req.body.category_id,
         user_id: req.body.user_id,
-        cifficulty_id: req.body.difficulty_id
+        difficulty_id: req.body.difficulty_id,
+        image: req.body.image
     },
     {
         where: {
