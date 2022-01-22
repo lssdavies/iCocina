@@ -26,8 +26,10 @@
                         <label for="Password" ></label>
                         <input type="password" id="password_login"  class = "formInput"placeholder="Password" size=10>
                         <div>
-                          <input type="submit" value="Login" id="submitSignIn" class="altButtons">
-                          <button id="backBtn" class="altButtons">Back</button>
+                        {{!-- FIXME: id 'submitSignIn is used again lower in the file' --}}
+                        {{!-- <input type="submit" value="Login" id="submitSignIn" class="altButtons"> --}}
+                        {{!-- FIXME: id 'backBtn is used again lower in the file' --}}
+                        {{!-- <button id="backBtn" class="altButtons">Back</button> --}}
                         </div>
                     </form>
                 </div>
@@ -47,8 +49,8 @@
                         <label for="password_signup" ></label>
                         <input type="password" id="password_signup"  class = "formInput"placeholder="Password" size=10>
                         <div>
-                        <input type="submit" value="Sign Up" id="submitSignIn" class="altButtons">
-                        <button id="backBtn" class="altButtons">Back</button>
+                        {{!-- <input type="submit" value="Sign Up" id="submitSignIn" class="altButtons"> --}}
+                        {{!-- <button id="backBtn" class="altButtons">Back</button> --}}
                         </div>
                     </form>
                 </div>
@@ -62,11 +64,11 @@
             <label for="categories" class="formLabel"> Cuisine Type: </label>
                 <select name="cuisine" id="cuisine" class="formInput">
                     <option disabled selected value> Choose </option>
-                    <option value="Mexican Cuisine">Mexican</option>
-                    <option value="Chinese Cuisine">Chinese</option>
-                    <option value="Italian cuisine">Italian</option>
-                    <option value="Indian Cuisine">Indian</option>
-                    <option value="Desserts">Desserts</option>
+                    <option data-category-number="1" value="Mexican Cuisine">Mexican</option>
+                    <option data-category-number="2" value="Chinese Cuisine">Chinese</option>
+                    <option data-category-number="3" value="Italian cuisine">Mercedes</option>
+                    <option data-category-number="4" value="Indian Cuisine">Indian</option>
+                    <option data-category-number="5" value="Desserts">Desserts</option>
                 </select>
                 </div>
                 <div>
@@ -128,6 +130,5 @@
     <script src="/assets/javascript/script.js"></script>
     <script src="/assets/javascript/login.js"></script>
     <script src="/assets/javascript/logout.js"></script> 
-    {{!-- <script src="./assets/javascript/comment.js"></script>      --}}
 </body>
 </html>
