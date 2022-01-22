@@ -1,10 +1,7 @@
 async function loginFormHandler(event) {
     event.preventDefault();
-    console.log('clicked login');
     const email = document.querySelector('#email_login').value.trim();
     const password = document.querySelector('#password_login').value.trim();
-    console.log(email)
-    console.log(password)
     if (email && password) {
         const response = await fetch('/api/users/login', {
             method: 'post',
@@ -45,7 +42,9 @@ async function signupFormHandler(event) {
 
         });
         if (response.ok) {
-            document.location.replace('/dashboard/')
+            console.log("============================")
+            debugger;
+            document.location.replace('/dashboard/');
         } else {
             alert(response.statusText);
         }

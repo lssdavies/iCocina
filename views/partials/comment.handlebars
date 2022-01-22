@@ -1,0 +1,14 @@
+<h3>Comments</h3>  
+  
+  <section>
+    {{#each this}}
+    <div>
+      <div>
+        <span>{{user.username}} on {{formatDate created_at}} wrote:</span>
+      </div>
+      <div>
+        {{comment_text}}
+      </div>
+    </div>
+    {{/each}}
+  </section>

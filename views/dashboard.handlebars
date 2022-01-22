@@ -1,4 +1,5 @@
-
+<!-- adding logout button here? -->
+<!-- and hiding login button? -->
 <section>
   <h2>Your Posts</h2>
   <ol>
@@ -14,6 +15,7 @@
                     <p>{{recipe.instruction}}</p>
                 </div>
             </div>
+            {{> comment recipe.comments}}
         </div>
     {{/each}}
   </ol>

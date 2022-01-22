@@ -3,7 +3,7 @@ const sequelize = require("../config/connection");
 const { Recipe, User, Comment } = require("../models");
 const withAuth = require("../utils/auth");
 
-router.get("/", (req, res) => {
+router.get("/", withAuth, (req, res) => {
   Recipe.findAll({
     where: {
       user_id: req.session.user_id
