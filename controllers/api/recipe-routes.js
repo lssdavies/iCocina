@@ -76,7 +76,6 @@ router.get('/:cuisine/:difficulty', (req, res) => {
         }
       }
     },
-    raw:true
 //}).then (dbRecipeData => res.render('recipe', {recipes: dbRecipeData}))
 }).then (dbRecipeData => res.json(dbRecipeData))
 .catch(err => {
