@@ -76,13 +76,12 @@ router.get('/:cuisine/:difficulty', (req, res) => {
         }
       }
     },
-    raw:true
-//}).then (dbRecipeData => res.render('recipe', {recipes: dbRecipeData}))
-}).then (dbRecipeData => res.json(dbRecipeData))
-.catch(err => {
-  console.log(err);
-  res.status(500).json(err);
-});
+  })
+  .then (dbRecipeData => res.json(dbRecipeData))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 // create new recipe

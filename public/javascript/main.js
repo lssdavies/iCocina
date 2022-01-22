@@ -10,6 +10,7 @@ function recipeLookup(event) {
     fetch("/api/recipes/"+selectCategory+"/"+selectDifficulty)
     .then(response => {
         document.location.replace("/api/recipes/"+selectCategory+"/"+selectDifficulty);
+        //document.location.replace("/recipe")
     })
         //return response.json()
     /*}).then (data => {
