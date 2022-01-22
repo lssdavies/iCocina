@@ -4,6 +4,7 @@ const { Op } = require("sequelize");
 
 // FIND all recipes
 router.get('/', (req, res) => {
+  console.log('in here...');
   Recipe.findAll (
     {
       include: [
@@ -67,6 +68,7 @@ router.get('/:id', (req, res) => {
 
 // getting recipe by params
 router.get('/:cuisine/:difficulty', (req, res) => {
+  console.log('in recipe route');
   Recipe.findAll ({
     include: {
       model: Category,
