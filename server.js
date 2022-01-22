@@ -1,10 +1,12 @@
 const express = require('express');
+const path = require('path');
 const routes = require('./controllers')
 const expressHbs = require('express-handlebars');
 
 // import sequelize connection
 const sequelize = require('./config/connection');
 
+// this is where you put helpers
 const hbs = expressHbs.create({ });
 
 const app = express();
@@ -18,6 +20,7 @@ app.use(express.static('public'));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));  
 
 app.use(routes);
 

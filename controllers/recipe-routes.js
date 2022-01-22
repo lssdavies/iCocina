@@ -25,12 +25,27 @@ router.get("/", (req, res) => {
   .then(dbRecipeData => {
     const recipes = dbRecipeData.map(recipe => recipe.get({ plain: true }))
     //res.render("homepage", { recipes, loggedIn: req.session.loggedIn })
-    res.render("homepage", {recipes})
+    res.render("recipe", {recipes})
   })
   .catch(err => {
     console.log(err)
-    res.status(500).json(err)
+    res.status(500).json(err) 
   })
 })
+
+/*// getting recipe by params
+router.get('/:cuisine/:difficulty', (req, res) => {
+  Recipe.findAll ({
+    where: { 
+      category_id: req.params.cuisine,
+      difficulty_id: req.params.difficulty
+    },
+}).ten (dbRecipeData => res.render('recipe', {recipes: dbRecipeData}))
+.catch(err => {
+  console.log(err);
+  res.status(500).json(err);
+});
+});*/
+
 
 module.exports = router;
