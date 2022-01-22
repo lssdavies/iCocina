@@ -35,7 +35,7 @@ router.get("/", (req, res) => {
   })
 })
 
-/*// getting recipe by params
+// getting recipe by params
 router.get('/:cuisine/:difficulty', (req, res) => {
   Recipe.findAll ({
     where: { 
@@ -61,4 +61,4 @@ router.get('/:cuisine/:difficulty', (req, res) => {
 
 
 
-module.exports = router;*/
+module.exports = router;

@@ -269,7 +269,7 @@ const dbRecipeData = [
   {
     title: "Tiramisu",
     ingredient: `
-    6 egg yolks \n 
+    6 egg yolks <br>
     3/4 cup white sugar \n
     2/3 cup milk \n
     1 1/4 cups heavy cream \n

@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const sequelize = require("../config/connection");
 const { Recipe, User, Comment } = require("../models");
+const withAuth = require("../utils/auth");
 
 router.get("/", (req, res) => {
   Recipe.findAll({
@@ -27,7 +28,7 @@ router.get("/", (req, res) => {
   .then(dbRecipeData => {
     const recipes = dbRecipeData.map(recipe => recipe.get({ plain: true }))
     
-    res.render("dashbaord", {recipes})
+    res.render("dashboard", {recipes, loggedIn: true})
   })
   .catch(err => {
     console.log(err)

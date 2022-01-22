@@ -1,4 +1,4 @@
-{{#if recipe.length}}
+
 <section>
   <h2>Your Posts</h2>
   <ol>
@@ -8,7 +8,9 @@
                 <img src={{recipe.image}} alt="receipe-image" />
                 <div class="card-body">
                     <h3>{{recipe.title}}</h3>
+                    <h5>Ingredients</h5>
                     <p>{{recipe.ingredient}}</p>
+                    <h5>Instructions</h5>
                     <p>{{recipe.instruction}}</p>
                 </div>
             </div>
@@ -16,4 +18,4 @@
     {{/each}}
   </ol>
 </section>  
-{{/if}}
+
