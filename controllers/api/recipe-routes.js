@@ -78,7 +78,12 @@ router.get('/:cuisine/:difficulty', (req, res) => {
     },
     raw:true
 //}).then (dbRecipeData => res.render('recipe', {recipes: dbRecipeData}))
-}).then (dbRecipeData => res.json(dbRecipeData))
+//}).then (dbRecipeData => res.json(dbRecipeData))
+  }).then(dbRecipeData => {
+    const recipes = dbRecipeData.map(recipe => recipe.get({ plain: true }))
+    //res.render("homepage", { recipes, loggedIn: req.session.loggedIn })
+    res.render("recipe", {recipes})
+  })
 .catch(err => {
   console.log(err);
   res.status(500).json(err);
