@@ -79,7 +79,11 @@ router.get('/:cuisine/:difficulty', (req, res) => {
       }
     },
   })
-  .then (dbRecipeData => res.json(dbRecipeData))
+  .then (dbRecipeData => {
+    const recipes = dbRecipeData.map(recipe => recipe.get({ plain: true }));
+    res.render('recipe', { recipes }); 
+
+  })
   .catch(err => {
     console.log(err);
     res.status(500).json(err);

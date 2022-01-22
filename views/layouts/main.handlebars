@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <title>iCocina</title>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="./assets/images/iCocina2.png" alt="Logo" />
+            <img src="/assets/images/iCocina2.png" alt="Logo" />
         </div>
         <div class="logIn">
             <nav>
                 {{!-- Hidden Sign In --}}
+                {{!-- {{#if loggedIn --}}
+                <button id="logout" class="buttons">Logout</button>
+                {{!-- {{else --}}
                 <button id="signIn" class="buttons">Login</button>
                 <div class="hiddenSignIn" id="hiddenSignIn">
                     <form class="signInForm" id="signInForm">
@@ -23,11 +26,12 @@
                         <label for="Password" ></label>
                         <input type="password" id="password_login"  class = "formInput"placeholder="Password" size=10>
                         <div>
-                        <input type="submit" value="Login" id="submitSignIn" class="altButtons">
-                        <button id="backBtn" class="altButtons">Back</button>
+                          <input type="submit" value="Login" id="submitSignIn" class="altButtons">
+                          <button id="backBtn" class="altButtons">Back</button>
                         </div>
                     </form>
                 </div>
+                {{!-- {{/if --}}
                 <button id="signUp" class="buttons">Sign Up</button>
                 <div class="hiddenSignUp" id="hiddenSignUp">
                     <form class="signInForm" id="signUpForm">
@@ -59,7 +63,7 @@
                     <option disabled selected value> Choose </option>
                     <option value="Mexican Cuisine">Mexican</option>
                     <option value="Chinese Cuisine">Chinese</option>
-                    <option value="Italian cuisine">Mercedes</option>
+                    <option value="Italian cuisine">Italian</option>
                     <option value="Indian Cuisine">Indian</option>
                     <option value="Desserts">Desserts</option>
                 </select>
@@ -103,7 +107,13 @@
     <article>
         <div class="cardSection">
             <div class="cardHolders">
+                {{#if loggedIn}}
+                    {{#each user}}
+                        <h2>{{username}}/h2>
+                    {{/each}}
+                {{else}}
                 <h2>Popular Recipes</h2>
+                {{/if}}
                 {{{body}}}
             </div>
         </div>
@@ -114,9 +124,9 @@
     </footer>
 
     <script src="/javascript/main.js"></script>
-    <script src="./assets/javascript/script.js"></script>
-    <script src="./assets/javascript/login.js"></script>
-    {{!-- <script src="./assets/javascript/logout.js"></script> 
-    <script src="./assets/javascript/comment.js"></script>       --}}
+    <script src="/assets/javascript/script.js"></script>
+    <script src="/assets/javascript/login.js"></script>
+    <script src="/assets/javascript/logout.js"></script> 
+    {{!-- <script src="./assets/javascript/comment.js"></script>      --}}
 </body>
 </html>

@@ -2,9 +2,21 @@ const express = require('express');
 const path = require('path');
 const routes = require('./controllers')
 const expressHbs = require('express-handlebars');
+const session = require('express-session');
 
 // import sequelize connection
 const sequelize = require('./config/connection');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
 
 // this is where you put helpers
 const hbs = expressHbs.create({ });
@@ -20,7 +32,8 @@ app.use(express.static('public'));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));  
+app.use(express.static(path.join(__dirname, 'public'))); 
+app.use(session(sess));
 
 app.use(routes);
 
