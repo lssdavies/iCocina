@@ -30,50 +30,74 @@ header {
     
 }
 
-/*logo styling*/
-.logo img  {
-   /* width: 100px;
-   height:100px; */
-   margin-left: 1rem;
-}
-
-/* 
-#profile    {
-   width: 50px;
-   height:50px;
-} */
-
 .logIn  {
-    width: 40%;
+    width: 50%;
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 nav {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    padding: 1rem;
-    margin: 1rem 0;
 }
 .buttons    {
     padding: 0.25rem .5rem;
     margin: 0.50rem;
-    max-width: 10rem;
+    min-width: 6rem;
     color: var(--tertiaryColor);
     border: 1px solid var(--primaryColor);
     border-radius: .5rem;
     background-color: var(--secondaryColor);
-    /* box-shadow: 6px 6px 6px var(--accentColorOpague); */
     box-shadow: 6px 6px 6px rgba(0,0,0,0.8);
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     transition: 0.4s ease-in-out;
 }
-.buttons:hover{
+.altButtons {
+    padding: 0.25rem .25rem;
+    margin-top: .5rem;
+    min-width: 3rem;
+    color: var(--tertiaryColor);
+    border: 1px solid var(--primaryColor);
+    border-radius: .5rem;
+    background-color: var(--secondaryColor);
+    box-shadow: 6px 6px 6px rgba(0,0,0,0.8);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;    
+}
+
+.buttons:hover, .altButtons:hover   {
     color: white;
     text-decoration-color: var(--fifthColor);
     text-decoration: underline;
     background-color: var(--tertiaryColor);
     box-shadow: 4px 4px 5px var(--accentColorOpague);
 }
+
+
+.hiddenSignIn, .hiddenSignUp, .hideButtons   {
+    display: none;
+}
+.showSignIn {
+    display: visible;
+}
+   
+.signInForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+/* Hero Styling*/
 .hero   {
     display: flex;
     align-items: center;
@@ -109,23 +133,23 @@ nav {
     align-items: center;
 }
 
-.searchField label   {
+.formLabel   {
     color: var(--fourthColor);
     font-weight: bold;
     margin: 0.5rem;
     /* text-shadow: 3px 3px 8px rgba(0,0,0,0.8); ; */
 }
-.searchField select {
+.formInput {
     font-size: 1rem;
     font-weight: lighter;
     color: var(--fourthColor);
     border-radius: 1rem;
     border: 1px solid var(--accentColor);
     text-align: center;
-    min-width: 10rem;
+    min-width: 8rem;
     padding: .25rem;
     box-shadow: 6px 6px 6px rgba(0,0,0,0.8);
-    background-color: var(--additionalColor);
+    /* background-color: var(--additionalColor); */
 }
 .searchField option {
     font-size: 1rem;
@@ -169,6 +193,13 @@ nav {
     padding: 1rem;
     margin: 0 auto;
 }
+.cardHolders h2{
+    color: var(--tertiaryColor);
+    font-weight: bolder;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 6px var(--fifthColor);
+
+}
 .card   {
     border: 2px solid var(--additionalColor);
     border-radius: 1rem;
@@ -183,9 +214,13 @@ nav {
     border: none;
     border-radius: 1rem 1rem 0 0;
 }
-
-.card-img img {
+.card-img   {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center; 
+}
+.card-img img {
     height: 10rem;
     width: 10rem;
     padding: .5rem;
