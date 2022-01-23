@@ -2,7 +2,8 @@ const loginBtn = document.getElementById("signIn");
 const signUpBtn = document.getElementById("signUp");
 const signInArea = document.getElementById("hiddenSignIn");
 const signUpArea = document.getElementById("hiddenSignUp");
-const backBtn = document.getElementById("backBtn1");
+const backBtn1 = document.getElementById("backBtn1");
+const backBtn2 = document.getElementById("backBtn2");
 
 function showLogin() {
   //hide login and sign up buttons on page by adding class to hide element.
@@ -29,4 +30,5 @@ function reloadPage() {
 
 loginBtn.addEventListener("click", showLogin);
 signUpBtn.addEventListener("click", showSignUp);
-backBtn.addEventListener("click", reloadPage);
+backBtn1.addEventListener("click", reloadPage);
+backBtn2.addEventListener("click", reloadPage);
