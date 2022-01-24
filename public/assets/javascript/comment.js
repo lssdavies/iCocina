@@ -11,7 +11,7 @@ async function commentFormHandler(event) {
                 comment_text
             }),
             headers: {
-                'Content-Type': 'application/jason'
+                'Content-Type': 'application/json'
             }
         });
         if (response.ok) {

@@ -42,4 +42,45 @@ router.get("/login", (req, res) => {
   res.render("homepage");
 });
 
+
+router.get("/recipe/:id", (req, res) => {
+  Recipe.findOne({
+    where: {
+      id: req.params.id
+    },
+    attributes: ["id", "title", "ingredient", "instruction", "calories", "category_id", "user_id", "difficulty_id", "image", "created_at"
+    ],
+    include: [
+      {
+        model: Comment,
+        attributes: ["id", "comment_text", "user_id", "recipe_id", "created_at"],
+        include: {
+          model: User,
+          attributes: ["username"]
+        }
+      },
+      {
+        model: User,
+        attributes: ["username"]
+      }
+    ]
+  })
+    .then(dbRecipeData => {
+      console.log(dbRecipeData)
+      if (!dbRecipeData) {
+        res.status(404).json({ message: "No recipe found with this id" });
+        return;
+      }
+
+      const recipes = dbRecipeData.get({ plain: true });
+
+      res.render("single-recipe", { recipes });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+
 module.exports = router;
