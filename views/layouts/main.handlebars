@@ -64,9 +64,8 @@
         <div class="cardSection">
             <div class="cardHolders">
                 {{#if loggedIn}}
-                    {{#each user}}
-                        <h2>{{username}}/h2>
-                    {{/each}}
+                        <h2>{{user.username}}</h2>
+                   
                 {{else}}
                 <h2>Popular Recipes</h2>
                 {{/if}}

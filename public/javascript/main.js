@@ -7,10 +7,15 @@ function recipeLookup(event) {
   //var recipeContainer = document.getElementById("recipe-container")
 
   if (!selectCategory && !selectDifficulty) {
-    window.alert('Please select a cuisine type or a category to search for a recipe');
+    window.alert('Please select a cuisine type or a category to search for a recipe.');
   }
   else {
   window.location.href = "/recipe/" + selectCategory + "/" + selectDifficulty;
+};
+
+if (selectCategory) {
+  console.log(selectCategory);
+  window.location.href = "/recipe/" + selectCategory;
 }
   //console.log(category)
   //fetch("/api/recipes/"+selectCategory+"/"+selectDifficulty)
