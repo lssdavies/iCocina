@@ -8,52 +8,7 @@
     <title>iCocina</title>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="/assets/images/iCocina2.png" alt="Logo" />
-        </div>
-        <div class="logIn">
-            <nav>
-                {{!-- Hidden Sign In --}}
-                {{!-- {{#if loggedIn  --}}
-                <button id="logout" class="buttons">Logout</button>
-                {{!-- {{else --}}
-                <button id="signIn" class="buttons">Login</button>
-                <div class="hiddenSignIn" id="hiddenSignIn">
-                    <form class="signInForm" id="signInForm">
-                        <label for="email" ></label>
-                        <input type="text" id="email_login" class = "formInput" placeholder="Email" size=10>
-                        <label for="Password" ></label>
-                        <input type="password" id="password_login"  class = "formInput"placeholder="Password" size=10>
-                        <div>
-                        <input type="submit" value="Login" id="submitSignIn1" class="altButtons">
-                        <button id="backBtn1" class="altButtons">Back</button>
-                        </div>
-                    </form>
-                </div>
-
-                <button id="signUp" class="buttons">Sign Up</button>
-                <div class="hiddenSignUp" id="hiddenSignUp">
-                    <form class="signInForm" id="signUpForm">
-                        <label for="username-signup" ></label>
-                        <input type="text" id="username_signup" class = "formInput" placeholder="User Name" size=10>
-                        <label for="first_name" ></label>
-                        <input type="text" id="first_name" class = "formInput" placeholder="First Name" size=10>
-                        <label for="last_name" ></label>
-                        <input type="text" id="last_name" class = "formInput" placeholder="Last Name" size=10>
-                        <label for="email_signup" ></label>
-                        <input type="text" id="email_signup" class = "formInput" placeholder="Email" size=10>
-                        <label for="password_signup" ></label>
-                        <input type="password" id="password_signup"  class = "formInput"placeholder="Password" size=10>
-                        <div>
-                        <input type="submit" value="Sign Up" id="submitSignIn2" class="altButtons">
-                        <button id="backBtn2" class="altButtons">Back</button>
-                        </div>
-                    </form>
-                </div>
-            </nav>
-        </div>
-    </header>
+    {{> header }}
     <section class="hero">
         <div class= "searchContainer">
             <form class="searchField">
@@ -71,6 +26,7 @@
                 <div>
                 <label for="difficulty" class="formLabel"> Difficulty Level: </label>
                 <select name="difficulty" id="difficulty" class="formInput">
+                    <option disabled selected value> Choose </option>
                     <option value="Basic">Basic</option>
                     <option value="Moderate">Moderate</option>
                     <option value="Advanced">Advanced</option>
@@ -124,8 +80,5 @@
     </footer>
 
     <script src="/javascript/main.js"></script>
-    <script src="/assets/javascript/script.js"></script>
-    <script src="/assets/javascript/login.js"></script>
-    <script src="/assets/javascript/logout.js"></script> 
 </body>
 </html>

@@ -8,11 +8,17 @@
             <div class="card-img">
                 <img src={{recipe.image}} alt="receipe-image" />
                 <div class="card-body">
+                  <div>
                     <h3>{{recipe.title}}</h3>
-                    <h5>Ingredients</h5>
+                  </div>
+                  <div>
+                    <h5>Ingredients </h5>
                     <p>{{recipe.ingredient}}</p>
-                    <h5>Instructions</h5>
+                  </div>
+                  <div>
+                    <h5>Instructions </h5>
                     <p>{{recipe.instruction}}</p>
+                  </div>
                 </div>
             </div>
             {{> comment recipe.comments}}
