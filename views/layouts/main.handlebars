@@ -63,6 +63,7 @@
     <article>
         <div class="cardSection">
             <div class="cardHolders">
+                {{!-- this #if won't work because we're not passing loggedIn anymore --}}
                 {{#if loggedIn}}
                         <h2>{{user.username}}</h2>
                    
