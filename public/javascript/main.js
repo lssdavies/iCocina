@@ -2,13 +2,16 @@ function recipeLookup(event) {
   event.preventDefault();
 
   var selectCategory = document.querySelector('select[name="cuisine"]').value;
-  var selectDifficulty = document.querySelector(
-    'select[name="difficulty"]'
+  var selectDifficulty = document.querySelector('select[name="difficulty"]'
   ).value;
   //var recipeContainer = document.getElementById("recipe-container")
 
+  if (!selectCategory && !selectDifficulty) {
+    window.alert('Please select a cuisine type or a category to search for a recipe');
+  }
+  else {
   window.location.href = "/recipe/" + selectCategory + "/" + selectDifficulty;
-
+}
   //console.log(category)
   //fetch("/api/recipes/"+selectCategory+"/"+selectDifficulty)
   //.then(response => response.json()).then(data => {

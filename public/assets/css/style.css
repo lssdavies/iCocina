@@ -21,13 +21,24 @@ body    {
     font-family: 'Roboto','Cairo', Helvetica, Arial, sans-serif;
 }
 
+span    {
+    color: white;
+    font-weight: bolder;
+}
+
 /*Header styling*/
-header {
+header, footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: var(--additionalColor);
     border-bottom: 1px solid var(--accentColor);
     padding-left: 1rem;
+}
+.logo2 img{
+    height: 3rem;
+    width: 3rem;
+    margin: 1rem;
 }
 
 .logIn  {
