@@ -1,0 +1,36 @@
+<!-- adding logout button here? -->
+<!-- and hiding login button? -->
+<section>
+  <h2>Your Posts</h2>
+  <ol>
+    {{#each recipes as |recipe|}}
+        <div class="card">
+            <div class="card-img">
+                <img src="{{recipe.image}}" alt="food" />
+                <div class="card-body">
+                  <div>
+                    <h3>{{recipe.title}}</h3>
+                  </div>
+                  <div>
+                    <h5>Ingredients </h5>
+                    <p>{{recipe.ingredient}}</p>
+                  </div>
+                  <div>
+                    <h5>Instructions </h5>
+                    <p>{{recipe.instruction}}</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cardSection">
+          <div class="cardHolders">
+            
+              {{> comment recipe.comments}}
+           
+          </div>
+        </div>
+    {{/each}}
+  </ol>
+</section>  
+

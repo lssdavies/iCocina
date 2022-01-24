@@ -1,0 +1,44 @@
+<section class="recipe-cards">
+    <div id="recipes-container">
+        
+    </div>
+
+<div class="card">
+            <div class="card-img">
+                <img src="{{recipe.image}}" alt="food" />
+                <div class="card-body">
+                    <h3>{{recipe.title}}</h3>
+                    <h5>Ingredients</h5>
+                    <p>{{recipe.ingredient}}</p>    
+                    <h5>Instructions</h5>
+                    <p>{{recipe.instruction}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cardSection">
+          <div class="cardHolders">
+                {{> comment recipe.comments}}
+          </div>
+        </div>
+
+        {{#if loggedIn}}
+
+            <form class="comment-form">
+                <div>
+                    <label for="comment">Comment on Recipe</label>
+                    <textarea name="comment"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="buttons">submit</button>
+                </div>
+            </form>
+
+        {{/if}}
+
+
+</section>
+
+{{#if loggedIn}}
+<script src="/assets/javascript/comment.js"></script>
+{{/if}}

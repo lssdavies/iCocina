@@ -1,0 +1,16 @@
+
+
+<section class="recipe-cards"> 
+    {{#each recipes as |recipe|}}
+    <div class="card">
+        <div class="card-title">
+                <h3>
+                    <a href="/recipe/{{recipe.id}}">{{recipe.title}}</a>
+                </h3>
+        </div>
+        <div class="card-img">
+            <img src={{recipe.image}} alt="receipe-image" />
+        </div>
+    </div>
+    {{/each}}
+</section>
