@@ -73,8 +73,9 @@ router.get("/recipe/:id", (req, res) => {
       }
 
       const recipes = dbRecipeData.get({ plain: true });
+      //const recipes = dbRecipeData.map(recipe => recipe.get({ plain: true }))
 
-      res.render("single-recipe", { recipes });
+      res.render("single-recipe", { recipes, loggedIn: true});
     })
     .catch(err => {
       console.log(err);
