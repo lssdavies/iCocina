@@ -2,6 +2,7 @@ const router = require("express").Router();
 const sequelize = require("../config/connection");
 const { Recipe, User, Comment, Category, Difficulty } = require("../models");
 const { Op } = require("sequelize");
+const withAuth = require("../utils/auth");
 
 router.get("/", (req, res) => {
   console.log(req.session);
@@ -80,7 +81,7 @@ router.get("/:cuisine/:difficulty", async (req, res) => {
         });
         return;
       }
-      res.render("recipe", { recipes: dbRecipeData });
+      res.render("recipe", { recipes: dbRecipeData, loggedIn: true });
     })
     .catch((err) => {
       console.log(err);
