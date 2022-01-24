@@ -2,24 +2,28 @@
     <div id="recipes-container">
         
     </div>
-       
 
-    {{#each recipes as |recipe|}}
+    <h1>is this page rendering</h1>
+
     <div class="card">
         <div class="card-img">
             <img src={{recipe.image}} alt="receipe-image" />
             <div class="card-body">
                 <h3>{{recipe.title}}</h3>
                 <h5>Ingredients</h5>
-                <p>{{{breaklines recipe.ingredient}}}</p>
+                {{!-- <p>{{{breaklines recipe.ingredient</p> --}}
+                <p>{{{recipe.ingredient}}}</p>
                 <h5>Instructions</h5>
-                <p>{{{breaklines recipe.instruction}}}</p>
+                {{!-- <p>{{{breaklines recipe.instruction</p> --}}
+                <p>{{{recipe.ingredient}}}</p>
             </div>
         </div>
     </div>
-    {{/each}}
+
+    
 
 </section>
 
-<script src="/javascript/main.js"></script>
-<script src="/javascript/recipe.js"></script>
+{{#if loggedIn}}
+<script src="/assets/javascript/comment.js"></script>
+{{/if}}
