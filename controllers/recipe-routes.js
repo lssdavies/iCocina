@@ -5,8 +5,7 @@ const { Op } = require("sequelize");
 const withAuth = require("../utils/auth");
 
 router.get("/", (req, res) => {
-  console.log(req.session);
-  console.log("getting recipes");
+
   Recipe.findAll({
     attributes: [
       "id",

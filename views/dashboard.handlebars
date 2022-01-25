@@ -23,13 +23,13 @@
             </div>
         </div>
 
+        {{#if loggedIn}}
         <div class="cardSection">
           <div class="cardHolders">
-            
               {{> comment recipe.comments}}
-           
           </div>
         </div>
+        {{/if}}
     {{/each}}
   </ol>
 </section>  
