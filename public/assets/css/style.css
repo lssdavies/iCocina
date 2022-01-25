@@ -21,6 +21,12 @@ body    {
     font-family: 'Roboto','Cairo', Helvetica, Arial, sans-serif;
 }
 
+a, a:hover, a:link, a:visited, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+
 span    {
     color: white;
     font-weight: bolder;
