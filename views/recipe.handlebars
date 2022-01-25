@@ -17,31 +17,18 @@
             </div>
         </div>
     </div>
-    {{/each}}
 
     <div class="cardSection">
             <div class="cardHolders">
                 
-                <h2>Comments</h2>  
-  
-  <section>
-
-            {{#each comments as |comment|}}
-            <div>
-            <div>
-                <span>{{user.username}} on {{formatDate created_at}} wrote:</span>
-            </div>
-            <div>
-                {{comment_text}}
-            </div>
-            </div>
-            {{/each}}
-  </section>
+                {{> comment recipe.comments}}
 
 
 
             </div>
     </div>
+
+    {{/each}}
 
 </section>
 

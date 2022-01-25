@@ -25,7 +25,7 @@ router.get("/", (req, res) => {
   .then(dbRecipeData => {
     const recipes = dbRecipeData.map(recipe => recipe.get({ plain: true }))
     //res.render("homepage", { recipes, loggedIn: req.session.loggedIn })
-    res.render("homepage", {recipes})
+    res.render("homepage", {recipes, loggedIn: req.session.loggedIn })
   })
   .catch(err => {
     console.log(err)
@@ -82,7 +82,7 @@ router.get("/recipe/:id", (req, res) => {
       console.log(recipes.image)
       console.log("!!!!!!!!!!!!!!!")
 
-      res.render("single-recipe", { recipes, loggedIn: true});
+      res.render("single-recipe", { recipes, loggedIn: req.session.loggedIn });
     })
     .catch(err => {
       console.log(err);
