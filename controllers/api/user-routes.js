@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Recipe, Comment } = require('../../models');
+const withAuth = require("../../utils/auth");
 
 // GET all users
 router.get('/', (req, res) => {
@@ -63,7 +64,15 @@ router.post('/', (req, res) => {
     email: req.body.email,
     password: req.body.password
   })
-    .then(dbUserData => res.json(dbUserData))
+  .then(dbUserData => {
+    req.session.save(() => {
+      req.session.user_id = dbUserData.id
+      req.session.username = dbUserData.username
+      req.session.loggedIn = true
+
+      res.json(dbUserData)
+    })
+  })
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
@@ -116,7 +125,7 @@ router.post("/logout", (req, res) => {
 // UPDATE users
 // SET username: 'greatestcook', first_name: 'hector', last_name: 'sun', email: 'hsun@gmail.com', password: 'password1234'
 // WHERE id = 1;
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     // expects {username: 'greatestcook', first_name: 'selena', last_name: 'sun', email: 'hsun123@gmail.com', password: 'password5678'}
     User.update(req.body, {
       individualHooks: true,
@@ -138,7 +147,7 @@ router.put('/:id', (req, res) => {
 });
 
 // DELETE /api/users/1
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
   User.destroy({
     where: {
       id: req.params.id

@@ -2,6 +2,7 @@
     <div id="recipes-container">
         
     </div>
+       
 
     {{#each recipes as |recipe|}}
     <div class="card">
@@ -17,7 +18,31 @@
         </div>
     </div>
     {{/each}}
+
+    <div class="cardSection">
+            <div class="cardHolders">
+                
+                <h2>Comments</h2>  
+  
+  <section>
+
+            {{#each comments as |comment|}}
+            <div>
+            <div>
+                <span>{{user.username}} on {{formatDate created_at}} wrote:</span>
+            </div>
+            <div>
+                {{comment_text}}
+            </div>
+            </div>
+            {{/each}}
+  </section>
+
+
+
+            </div>
+    </div>
+
 </section>
 
 <script src="/javascript/main.js"></script>
-<script src="/javascript/recipe.js"></script>

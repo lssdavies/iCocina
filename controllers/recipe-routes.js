@@ -2,6 +2,7 @@ const router = require("express").Router();
 const sequelize = require("../config/connection");
 const { Recipe, User, Comment, Category, Difficulty } = require("../models");
 const { Op } = require("sequelize");
+const withAuth = require("../utils/auth");
 
 router.get("/", (req, res) => {
   console.log(req.session);
@@ -80,7 +81,7 @@ router.get("/:cuisine/:difficulty", async (req, res) => {
         });
         return;
       }
-      res.render("recipe", { recipes: dbRecipeData });
+      res.render("recipe", { recipes: dbRecipeData, loggedIn: true });
     })
     .catch((err) => {
       console.log(err);
@@ -88,33 +89,33 @@ router.get("/:cuisine/:difficulty", async (req, res) => {
     });
 });
 
-// //getting recipes by one param ie cuisine type
-// router.get("/:cuisine/", async (req, res) => {
-//   const category = await Category.findOne({
-//     where: { category_type: req.params.cuisine },
-//   });
-//   const categoryId = category.get().id;
-//   Recipe.findAll({
-//     where: {
-//       category_id: categoryId
-//     },
-//     raw: true,
-//   })
-//     .then((dbRecipeData) => {
-//       if (!dbRecipeData) {
-//         res.status(404).json({
-//           message:
-//             "No recipe found with the selected category and difficulty level",
-//         });
-//         return;
-//       }
-//       res.render("recipe", { recipes: dbRecipeData });
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//       res.status(500).json(err);
-//     });
-// });
+//getting recipes by one param ie cuisine type
+router.get("/:cuisine/", async (req, res) => {
+  const category = await Category.findOne({
+    where: { category_type: req.params.cuisine },
+  });
+  const categoryId = category.get().id;
+  Recipe.findAll({
+    where: {
+      category_id: categoryId
+    },
+    raw: true,
+  })
+    .then((dbRecipeData) => {
+      if (!dbRecipeData) {
+        res.status(404).json({
+          message:
+            "No recipe found with the selected category and difficulty level",
+        });
+        return;
+      }
+      res.render("recipe", { recipes: dbRecipeData });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 // // getting recipe by params ie difficulty
 // router.get("/:difficulty", async (req, res) => {

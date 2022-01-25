@@ -28,8 +28,8 @@ router.get("/", withAuth, (req, res) => {
   .then(dbRecipeData => {
     const recipes = dbRecipeData.map(recipe => recipe.get({ plain: true }))
     
-    //res.render("dashboard", {recipes, loggedIn: true})
-    res.render("dashboard", {recipes})
+    res.render("dashboard", {recipes, loggedIn: true})
+    //res.render("dashboard", {recipes})
   })
   .catch(err => {
     console.log(err)
