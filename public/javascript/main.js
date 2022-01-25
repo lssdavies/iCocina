@@ -13,7 +13,10 @@ function recipeLookup(event) {
   window.location.href = "/recipe/" + selectCategory + "/" + selectDifficulty;
 };
 
-
+// if (selectCategory) {
+//   console.log(selectCategory);
+//   window.location.href = "/recipe/" + selectCategory;
+// }
   //console.log(category)
   //fetch("/api/recipes/"+selectCategory+"/"+selectDifficulty)
   //.then(response => response.json()).then(data => {
