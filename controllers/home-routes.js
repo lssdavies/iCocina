@@ -66,14 +66,21 @@ router.get("/recipe/:id", (req, res) => {
     ]
   })
     .then(dbRecipeData => {
-      console.log(dbRecipeData)
+      // console.log(dbRecipeData)
       if (!dbRecipeData) {
         res.status(404).json({ message: "No recipe found with this id" });
         return;
       }
-
+      // Array.forEach((data, i) => {
+      //   return data
+      // })
+      // .mao
+      // .filter
       const recipes = dbRecipeData.get({ plain: true });
       //const recipes = dbRecipeData.map(recipe => recipe.get({ plain: true }))
+      console.log("!!!!!!!!!!!!!!!")
+      console.log(recipes.image)
+      console.log("!!!!!!!!!!!!!!!")
 
       res.render("single-recipe", { recipes, loggedIn: true});
     })

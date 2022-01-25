@@ -5,13 +5,13 @@
 
 <div class="card">
             <div class="card-img">
-                <img src="{{recipe.image}}" alt="food" />
+                <img src="{{recipes.image}}" alt="food" />
                 <div class="card-body">
-                    <h3>{{recipe.title}}</h3>
+                    <h3>{{recipes.title}}</h3>
                     <h5>Ingredients</h5>
-                    <p>{{recipe.ingredient}}</p>    
+                    <p>{{{breaklines recipes.ingredient}}}</p>    
                     <h5>Instructions</h5>
-                    <p>{{recipe.instruction}}</p>
+                    <p>{{{breaklines recipes.instruction}}}</p>
                 </div>
             </div>
         </div>
