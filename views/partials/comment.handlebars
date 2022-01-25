@@ -4,7 +4,8 @@
     {{#each this}}
     <div>
       <div>
-        <span>{{user.username}} on {{formatDate created_at}} wrote:</span>
+        Comment created on {{formatDate created_at}}</span>
+        {{!-- <p> {{user_id}}</p> --}}
       </div>
       <div>
         {{comment_text}}
