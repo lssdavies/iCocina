@@ -81,4 +81,4 @@ Please reach us using:
 
 * [Deployed Application](https://icocina.herokuapp.com/)
 * [Github Repository](https://github.com/kimberlyamaya/iCocina.git)
-![Web Appl](/public/assets/images/webapp.PNG)
+* ![Web Appl](/public/assets/images/webapp.PNG)
