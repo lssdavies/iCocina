@@ -65,8 +65,8 @@
             <div class="cardHolders">
                 {{!-- this #if won't work because we're not passing loggedIn anymore --}}
                 {{#if loggedIn}}
-                        <h2>{{user.username}}</h2>
-                   
+                        <h3>--You're logged in!--</h3>
+                        <h2>Popular Recipes</h2>
                 {{else}}
                 <h2>Popular Recipes</h2>
                 {{/if}}
