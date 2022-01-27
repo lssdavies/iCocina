@@ -1,5 +1,7 @@
 # iCocina
 
+## This version will be my enhancements to an existing group project
+
 ![Github License](https://img.shields.io/static/v1?label=License&message=MIT&color=blue&style=for-the-badge)
 
 ## Description
